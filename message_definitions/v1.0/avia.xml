@@ -1,0 +1,16 @@
+<mavlink>
+     <version>3</version>
+     <dialect>0</dialect>
+     <messages>    
+          <message id="500" name="SET_FW_NAV_TARGET">
+               <description>Sets desired fixed wing nav targets. Used by an external controller to command the vehicle (manual controller or other system).</description>
+               <field type="uint32_t" name="time_boot_ms">Timestamp in milliseconds since system boot</field>
+               <field type="uint8_t" name="target_system">System ID</field>
+               <field type="uint8_t" name="target_component">Component ID</field>
+               <field type="float" name="roll">Desired roll angle in radians</field>
+               <field type="float" name="thrust">Collective thrust, normalized to 0 .. 1 (-1 .. 1 for vehicles capable of reverse trust)</field>
+               <field type="float" name="flaps">desired flap setting, normalized to (-1 .. 1)</field>
+          </message>
+    </messages>
+</mavlink>
+
